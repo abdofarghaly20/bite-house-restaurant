@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite House | Digital Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo"><span>🍔</span> Bite House</a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About</a>
+    </nav>
+    <button class="cart-btn" id="cartButton">
+        🛒 Cart <span id="cartCount">0</span>
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">FRESH • TASTY • DELICIOUS</span>
+        <h1>Good Food.<br><span>Great Mood.</span></h1>
+        <p>Discover your new favorite meal, made fresh with love and the finest ingredients.</p>
+        <a href="#menu" class="primary-btn">Explore Our Menu →</a>
+        <div class="hero-stats">
+            <div><strong>20+</strong><small>Menu Items</small></div>
+            <div><strong>100%</strong><small>Fresh Food</small></div>
+            <div><strong>4.9 ★</strong><small>Customer Rating</small></div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Delicious burger">
+        <div class="floating-card">🔥 Customer Favorite<br><strong>Classic Burger</strong></div>
+    </div>
+</section>
+
+<section class="menu-section" id="menu">
+    <div class="section-heading">
+        <span class="eyebrow">WHAT WE SERVE</span>
+        <h2>Explore Our <span>Menu</span></h2>
+        <p>Fresh flavors, carefully prepared just for you.</p>
+    </div>
+
+    <div class="menu-tools">
+        <div class="categories" id="categories">
+            <button class="category active" data-category="All">All Items</button>
+            <button class="category" data-category="Burgers">🍔 Burgers</button>
+            <button class="category" data-category="Pizza">🍕 Pizza</button>
+            <button class="category" data-category="Pasta">🍝 Pasta</button>
+            <button class="category" data-category="Drinks">🥤 Drinks</button>
+        </div>
+        <input type="search" id="searchInput" placeholder="🔍 Search your favorite food...">
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="empty-message" id="emptyMessage" hidden>No items found. Try another search.</p>
+</section>
+
+<section class="about-section" id="about">
+    <div>
+        <span class="eyebrow">OUR STORY</span>
+        <h2>Made with passion.<br><span>Served with love.</span></h2>
+    </div>
+    <p>At Bite House, we believe great food brings people together. Every dish is prepared with fresh ingredients and a passion for unforgettable flavors.</p>
+</section>
+
+<footer>
+    <a href="#" class="logo">🍔 Bite House</a>
+    <p>Fresh food, happy moments.</p>
+    <small>© 2026 Bite House. Personal portfolio demo.</small>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h2>Your Cart 🛒</h2>
+            <button id="closeCart" class="close-btn" aria-label="Close cart">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="cartTotal">$0.00</strong>
+            </div>
+            <button id="checkoutButton" class="primary-btn checkout-btn">Place Demo Order</button>
+            <small>This is a demo menu. No real order will be sent.</small>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
